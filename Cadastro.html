@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body{
+            background-image: url(alo.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 auto;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container1{
+            backdrop-filter: blur(10px);
+            padding: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border: none rgb(46, 42, 42);
+            border-radius: 30px;
+            background-color: rgba(0,0,0,0.5);
+            box-shadow: 20px 20px 20px;
+        }
+
+        input{border-radius: 20px; padding: 10px; margin: 10px; background-color: white;}
+        label{color: white;}
+        h3{color: white; text-align: center;}
+
+        .CLT1{display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .CLT2{display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+       .password{
+            display: grid;
+            position: relative;
+            margin-left: 70px;
+        }
+
+       .senha1{width: 200px;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } 
+
+       .especial1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #mensagem{
+            padding: 50px;
+            background-color: white;
+            color: black;
+            line-height: normal;
+            height: auto;
+            padding: 15px 15px;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+        }
+       
+        button{
+            border-radius: 20px;
+            padding: 1px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 18px;
+            margin-left: 190px;
+            margin-top: 20px;
+            transition:all 0.3s ease ;
+            background-color: rgb(7, 130, 7);
+            color: white;
+        }
+
+        button:hover{
+            transition: 0.4s;
+            transform: translateY(-5px);
+            box-shadow: 10px 20px 30px black;
+        }
+
+        p{color: white; font-family: sans-serif; text-align: center;
+        }
+        a{text-decoration: none; color: rgb(83, 83, 252);
+        }
+    </style>
+
+    <script>
+
+function cadastrar() {
+    let nome = document.getElementById("nome").value;
+    let email = document.getElementById("email").value;
+    let senha = document.getElementById("senha").value;
+    let confirmarSenha = document.getElementById("confirmarsenha").value;
+    
+    if (nome === ""){
+        document.getElementById("resultado").value = "Digite seu nome"
+    }
+    else if(email.indexOf("@")=== -1){
+        document.getElementById("resultado").value = "Digite seu email"
+    }
+    else if (senha !== confirmarSenha) {
+        document.getElementById("mensagem").value = "As senhas não coincidem!";
+        mensagem.style.color = "red";
+    }
+    else{
+    
+        document.getElementById("mensagem").value= "Cadastro realizado com sucesso!";
+
+    }
+}
+    </script>
+</head>
+<body>
+        <div class="container">
+            <div class="container1">
+                <h3>Confira suas informações de cadastro</h3>
+                <div class="CLT2">
+                    <label class="label1" for="nome">
+                        Nome  <input type="text" placeholder="Digite seu nome" id="nome" required>
+                    </label>
+                    <label class="label2" for="email">
+                        Email<input type="text" placeholder="Digite seu email" id="email" required>
+                    </label>
+                </div>
+                <div class="passwords">
+                    <h3>Confirme sua senha</h3>
+                    <div class="password">
+                        <input type="password" placeholder="Digite sua senha" class="senha" id="senha" required>
+                        <input type="password" placeholder="Confirme sua senha" class="confirmarSenha" id="confirmarsenha" required>
+                    </div>
+                    <div class="especial1">
+                        <label for="mensagem">Condição do cadastro 
+                            <input type="text" disabled id="mensagem">
+                        </label>
+                    </div>    
+                </div>
+
+                <button onclick="cadastrar()">Criar Conta</button>
+    
+                <p>Já tem conta?<a href="Quest2.html"> Fazer Login</a></p>
+            </div>
+        </div>
+    
+</body>
+</html>
