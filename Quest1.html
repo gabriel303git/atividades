@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        
+        <style>
+            body{
+            background-color: #121C3A;
+            margin: 0;
+            margin-top: 0;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        .container1{
+            background-color: rgb(60, 67, 133);
+            border: 10px solid rgb(21, 20, 20);
+            border-radius: 60px;
+            padding: 5rem;
+        }
+        h1{
+            color: white;
+            text-align: center;
+        }
+        label{
+            color: white;
+        }
+
+
+        .inputa{
+            display: flex;
+            justify-content: center;
+            width: 200px;
+        }
+        input{
+            border-radius: 20px;
+            padding: 5px;
+            border: none;
+        }
+
+        .especial{
+           
+            background-color: white;
+            color: black;
+            line-height: normal;
+            height: auto;
+            padding: 15px 15px;
+            font-size: 16px;
+            display: block;
+        
+        }
+
+        button{
+            border-radius: 30px;
+            padding: 10px;
+            margin-top: 10px;
+            margin-left: 160px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover{
+            transition: 0.4s;
+            transform: translateY(-5px);
+            box-shadow: 10px 20px 30px;
+        }
+
+        button:active{
+            transition: 0,4s;
+            transform: translateY(5px);
+        }
+
+        #idade{
+            margin-right: 120px;
+        }
+        </style>
+
+        <script>
+        function abc(){
+            let a=parseInt(document.getElementById("idade").value)
+
+            if(a>=18){document.getElementById("aviso").value="Você pode dirigir"}
+            else{document.getElementById("aviso").value="Você ainda não pode dirigir"}
+        }
+
+        </script>
+
+    </head>
+    <body>
+            <div class="container">
+        <div class="container1">
+
+            <h1>Questão 1</h1>
+
+            <p style="color: white;">Preencha as informações a seguir:</p>
+
+            <div class="inputa">
+                <label>
+                Idade: <input type="number" min="0" max="130" id="idade">
+                </label>
+            </div>
+
+            <div class="inputa">
+                <label>
+                    Situação: <input type="text" id="aviso" disabled class="especial">
+                </label>
+            </div>
+
+            <button onclick="abc()"> Verificar </button>
+
+
+
+
+            
+        </div>
+    </div>
+    </body>
+    </html>
+</body>
+</html>
